@@ -1,0 +1,46 @@
+In this Assigment we have two routers :
+a) / => This route is for login where we can see the username,password & remember me layout
+b) /order => This router contains all the functionality for orders which are View, New, Edit, Delete.
+
+
+work-flow:
+=> when we are on the main page which is "/" we get to see the basic login box where the layout has been completed but not the functionality.
+=> To go order Page, We need to manually go the URL and enter '/order' (because authentication is not done yet - workaround solution)
+
+My Approach:
+=> First i wanted to work on the core functionality for the Assigment that was orders page : View, Add, Edit & Delete functionality
+=> then i have created the mocked/Dummy Data to show the list of orders
+=> then worked on delete functionality, for this i have passed the order number and filtering it out based on that and removing it from the orders State.
+=> then i have created the popUp using the react-bootstrap, this same popUp is been reused for create, Edit & delete(to show last warning)
+=> then i started working on the create order here i had to generate the order number either randomly or serialized. i choose to go with randomly since it is a small assignment
+=> after that created the inputs required in order to show that in the list of orders
+=> then assigned the useState hook to get & set the values for the required field.
+=> adding that to the orders data.
+=> then i moved to edit, here i have reused the same layout which was there for the create new order and passed down the values into it.
+=> checked for if the order has previously been created or not if so then no need to assign the value to it.
+
+
+Things Completed:
+a) Develop a login page with username, password, remember me.
+b) Add validation for username and password which are required.
+c) The user should be able to view all orders in a table.
+d) Each order has Order Number, Order Due Date, Customer buyer name,
+Customer Address, Customer Phone, OrderTotal(total value of order)
+d) The table should have edit, delete actions
+e) At the top of the table, on the right hand side there should be a New
+Order button.
+f) Clicking on New Order should open a popup with fields, Clicking on Edit
+Order should open a popup with fields filled in. (All fields should be
+allowed to edit)
+g) Clicking on delete should ask user for confirmation and delete.
+
+
+Things which are not Completed(Reason: Due to time):
+Login page: 
+- Once user logs in, redirect to an orders page.
+a) functionality for the login authentication.
+b) route linking for the login page to the order on success of authentication
+c) Remember me functionality: Create a cookie for this one
+
+Order Page:
+a) When we edit the order the state is updating but it is not getting render/Reflected on the page.
